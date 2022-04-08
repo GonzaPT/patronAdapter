@@ -1,0 +1,42 @@
+@startuml Adapter Patron
+
+class adapter implements clienteInterface{
+
+    - ntsc: NTSC
+    - pal: PAL
+
+    + transformNTSCtoPAL()
+    + transformPALtoNTSC()
+}
+
+adapter -> PAL
+class PAL{
+    - fps: double
+    - lines: int
+    - type: String
+
+    + getFps()
+    + getLines()
+    + getType()
+}
+
+adapter -> NTSC
+class NTSC{
+    - fps: double
+    - lines: int
+    - type: String
+
+    + getFps()
+    + getLines()
+    + getType()
+}
+
+interface clienteInterface{
+    + transformNTSCtoPAL()
+    + transformPALtoNTSC()
+}
+
+adapterMain -> clienteInterface
+class adapterMain{}
+
+@enduml
