@@ -9,7 +9,7 @@ class adapter implements clienteInterface{
     + transformPALtoNTSC()
 }
 
-adapter -> PAL
+PAL -> clienteInterface
 class PAL{
     - fps: double
     - lines: int
@@ -20,7 +20,7 @@ class PAL{
     + getType()
 }
 
-adapter -> NTSC
+NTSC -> clienteInterface
 class NTSC{
     - fps: double
     - lines: int
@@ -36,7 +36,7 @@ interface clienteInterface{
     + transformPALtoNTSC()
 }
 
-adapterMain -> clienteInterface
+adapter -> adapterMain
 class adapterMain{}
 
 @enduml

@@ -20,8 +20,4 @@ public class NTSC {
     public NTSC() {
     }
 
-    // public NTSC(double fps, int lines) {
-    // this.fps = fps;
-    // this.lines = lines;
-    // }
 }
